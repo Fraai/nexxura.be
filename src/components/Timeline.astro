@@ -1,0 +1,38 @@
+---
+import timeline from '../data/timeline.json';
+
+type timelineItem = {
+    title: string;
+    description: string;
+    date: string;
+}
+
+type timelineData = {
+    title: string;
+    description: string;
+    data: timelineItem[];
+}
+
+const timelineContent: timelineData = timeline;
+---
+
+<section class="py-24 sm:py-32 bg-brand-700 text-white">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
+            {timelineContent.data.map((item: timelineItem) => (
+                    <div>
+                        <time datetime="194" class="flex items-center text-sm/6 font-semibold">
+                            <svg viewBox="0 0 4 4" class="mr-4 size-1 flex-none" aria-hidden="true">
+                                <circle cx="2" cy="2" r="2" fill="currentColor"/>
+                            </svg>
+                            {item.date}
+                            <div class="absolute -ml-2 h-px w-screen -translate-x-full bg-white sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                                 aria-hidden="true"></div>
+                        </time>
+                        <p class="mt-6 text-lg/8 font-semibold tracking-tight">{item.title}</p>
+                        <p class="mt-1 text-base/7 ">{item.description}</p>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

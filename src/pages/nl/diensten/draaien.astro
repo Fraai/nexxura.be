@@ -1,0 +1,66 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import {Image} from 'astro:assets';
+import contentImage1 from '../../../assets/diensten/draaien/content1.png';
+
+export interface Props {
+    title: string;
+}
+
+const {title = 'Draaien'} = Astro.props;
+
+import { getLocaleFromUrl, useTranslations, allLocales, getLocalizedPath } from '../../../i18n';
+import Usp from "../../../components/Usp.astro";
+import Contact from "../../../components/Contact.astro";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+---
+<Layout title={title}>
+    <section class="py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-4xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h2>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Ons machinepark omvat CNC-draaibanken in diverse configuraties, van
+                    2-assige standaardmachines tot modellen met live tooling. Hiermee kunnen we zowel eenvoudige als
+                    complexe draaiwerkzaamheden uitvoeren.</p>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Bij Nexxura bewerken we werkstukken met een maximale lengte van 5000 mm tussen de centers, met een Ø1300
+                    mm en een gewicht tot 4 ton en dit met een tolerantieniveau van IT6. Of het nu gaat om precisiewerk of
+                    grotere projecten, wij garanderen vakmanschap en kwaliteit op maat van jouw wensen.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="overflow-hidden bg-white py-8">
+        <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                <div class="px-6 md:px-0 lg:pt-4 lg:pr-4">
+                    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                        <h2 class="text-2xl font-bold mb-4">{t('services.specs')}</h2>
+                        <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Z-axis travel</dt>
+                                <dd class="text-gray-900">5000mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Spindle Power</dt>
+                                <dd class="text-gray-900">46kW</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sm:px-6 lg:px-0">
+                    <Image
+                            src={contentImage1}
+                            alt={title}
+                            class="w-auto h-full"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <Usp />
+    <Contact />
+</Layout>

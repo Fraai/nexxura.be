@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import service from '../../../data/services.json';
+
+import { slugify } from '../../../utils/slugify';
+import Contact from "../../../components/Contact.astro";
+import Usp from "../../../components/Usp.astro";
+
+export async function getStaticPaths() {
+    return service.data.map(item => {
+        return {
+            params: { slug: slugify(item.title) },
+            props: { serviceItem: item }
+        };
+    });
+}
+
+const { serviceItem } = Astro.props;
+---
+<Layout title={`${serviceItem.title} | Diensten`}>
+    <div class="bg-white px-6 py-32 lg:px-8">
+        <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
+            <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{serviceItem.title}</h1>
+            <p class="mt-6 text-xl/8">Ons geavanceerd machinepark stelt ons in staat om kleine, grote én complexe onderdelen te bewerken. Dankzij onze diverse verticale machinecenters en 5-assige bewerkingscentra kunnen we bij Nexxura werkstukken aan tot 4500 mm (X-as), 2500 mm (Y-as), 1600 mm (Z-as) en een gewicht tot standaard 5 ton.</p>
+            <p>Dankzij onze precisiebewerkingen, met een tolerantieniveau van IT6, levert Nexxura hoogwaardige oplossingen die perfect aansluiten op jouw behoeften. Of het nu gaat om eenvoudige componenten of complexe maatwerkprojecten, wij garanderen kwaliteit en vakmanschap.</p>
+        </div>
+    </div>
+    <Usp />
+    <Contact />
+</Layout>

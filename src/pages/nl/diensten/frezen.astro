@@ -1,0 +1,178 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import {Image} from 'astro:assets';
+import contentImage1 from '../../../assets/diensten/frezen/content1.png';
+import contentImage2 from '../../../assets/diensten/frezen/content2.png';
+import contentImage3 from '../../../assets/diensten/frezen/content3.png';
+
+export interface Props {
+    title: string;
+}
+
+const {title = 'Frezen'} = Astro.props;
+
+import { getLocaleFromUrl, useTranslations, allLocales, getLocalizedPath } from '../../../i18n';
+import Usp from "../../../components/Usp.astro";
+import Contact from "../../../components/Contact.astro";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+---
+<Layout title={title}>
+
+    <section class="py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-4xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h2>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Ons geavanceerd machinepark stelt ons in staat om
+                    kleine, grote én complexe
+                    onderdelen te bewerken. Dankzij onze diverse verticale machinecenters en 5-assige
+                    bewerkingscentra
+                    kunnen we bij Nexxura werkstukken aan tot 4500 mm (X-as), 2500 mm (Y-as), 1600 mm (Z-as) en
+                    een gewicht
+                    tot standaard 5 ton.</p>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Dankzij onze precisiebewerkingen, met een tolerantieniveau van IT6, levert Nexxura
+                    hoogwaardige
+                    oplossingen die perfect aansluiten op jouw behoeften. Of het nu gaat om eenvoudige
+                    componenten of
+                    complexe maatwerkprojecten, wij garanderen kwaliteit en vakmanschap.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="overflow-hidden bg-white py-8">
+        <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                <div class="px-6 md:px-0 lg:pt-4 lg:pr-4">
+                    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                        <h2 class="text-2xl font-bold mb-4">{t('services.specs')}</h2>
+                        <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">X-axis travel</dt>
+                                <dd class="text-gray-900">4064mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Y-axis travel</dt>
+                                <dd class="text-gray-900">2540mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Z-axis travel</dt>
+                                <dd class="text-gray-900">1524mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">W-axis travel</dt>
+                                <dd class="text-gray-900">711.2mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">B-axis</dt>
+                                <dd class="text-gray-900">simultaneous</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Spindle Power</dt>
+                                <dd class="text-gray-900">22kW</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sm:px-6 lg:px-0">
+                    <Image
+                            src={contentImage1}
+                            alt={title}
+                            class="w-auto h-full"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden bg-white py-8">
+        <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                <div class="px-6 md:px-0 lg:pt-4 lg:pr-4">
+                    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                        <h2 class="text-2xl font-bold mb-4">{t('services.specs')}</h2>
+                        <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">X-axis travel</dt>
+                                <dd class="text-gray-900">4500mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Y-axis travel</dt>
+                                <dd class="text-gray-900">1250mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Z-axis travel</dt>
+                                <dd class="text-gray-900">1600mmo</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">A-axis travel</dt>
+                                <dd class="text-gray-900">4500x900</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Spindle Power</dt>
+                                <dd class="text-gray-900">38kW</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sm:px-6 lg:px-0">
+                    <Image
+                            src={contentImage2}
+                            alt={title}
+                            class="w-auto h-full"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden bg-white py-8">
+        <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                <div class="px-6 md:px-0 lg:pt-4 lg:pr-4">
+                    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                        <h2 class="text-2xl font-bold mb-4">{t('services.specs')}</h2>
+                        <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">X-axis travel</dt>
+                                <dd class="text-gray-900">1000mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Y-axis travel</dt>
+                                <dd class="text-gray-900">1000mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Z-axis travel</dt>
+                                <dd class="text-gray-900">600mm</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">B-/C-axis</dt>
+                                <dd class="text-gray-900">simultaneous</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">B-axis</dt>
+                                <dd class="text-gray-900">simultaneous</dd>
+                            </div>
+                            <div class="flex flex-col">
+                                <dt class="font-semibold text-gray-700">Spindle Power</dt>
+                                <dd class="text-gray-900">20kW</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sm:px-6 lg:px-0">
+                    <Image
+                            src={contentImage3}
+                            alt={title}
+                            class="w-auto h-full"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <Usp />
+    <Contact />
+
+</Layout>

@@ -1,0 +1,27 @@
+---
+import mission from '../data/mission.json';
+
+type missionData = {
+    title: string;
+    description: string;
+}
+
+const missionContent: missionData = mission;
+---
+<section class="py-16 sm:py-32">
+    <div class="relative container mx-auto">
+
+        <img class="h-56 rounded-2xl w-full object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2"
+             src="https://images.unsplash.com/photo-1648815546030-6a5792d4fa38?q=80&amp;w=3870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             alt="">
+
+        <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+            <div class="px-6 pt-16 pb-24 sm:pt-20 sm:pb-32 lg:col-start-2 lg:px-8 lg:pt-32">
+                <div class="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
+                    <h2 class="text-base/8 font-semibold text-brand-600">{missionContent.title}</h2>
+                    <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{missionContent.description}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

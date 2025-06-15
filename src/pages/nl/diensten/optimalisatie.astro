@@ -1,0 +1,30 @@
+
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import {Image} from 'astro:assets';
+import contentImage from '../../../assets/diensten/optimalisatie/content.png';
+import Contact from "../../../components/Contact.astro";
+
+export interface Props {
+    title: string;
+}
+
+const {title = 'Optimalisatie'} = Astro.props;
+---
+<Layout title={title}>
+    <section class="py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-4xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h2>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Bij Nexxura staat expertise in FEA (Finite Element Analysis) en CFD (Computational Fluid Dynamics) centraal. Sterkteberekeningen op mechanische constructies en vloeistofdynamica behoren tot onze core business.
+                </p>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Nexxura wordt geleid door een technisch expert met doorgedreven kennis en een hands-on mentaliteit. Gedreven door de zoektocht naar realistische en werkbare oplossingen, heeft hij jarenlang nauw samengewerkt met klanten om complexe vraagstukken op te lossen.
+                </p>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Deze ervaring heeft geleid tot een sterke affiniteit met de materie en de mogelijkheid om technische uitdagingen met een praktische insteek aan te pakken. Nexxura combineert diepgaande kennis met een focus op haalbare, effectieve resultaten.
+                </p>
+            </div>
+        </div>
+    </section>
+    <Contact />
+</Layout>

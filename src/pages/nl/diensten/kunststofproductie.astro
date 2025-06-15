@@ -1,0 +1,26 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import {Image} from 'astro:assets';
+import featureImage from '../../../assets/diensten/kunststof/feature.png';
+import Contact from "../../../components/contact.astro";
+import Usp from "../../../components/Usp.astro";
+
+export interface Props {
+    title: string;
+}
+
+const {title = 'Kunststofproductie'} = Astro.props;
+---
+<Layout title={title}>
+    <section class="py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-4xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h2>
+                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">ONTBREEKT</p>
+            </div>
+        </div>
+    </section>
+    <Usp />
+    <Contact />
+</Layout>
