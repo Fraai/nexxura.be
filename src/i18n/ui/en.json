@@ -1,38 +1,171 @@
 {
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "page": {
+    "home": {
+      "title": "Nexxura"
+    },
+    "about": {
+      "title": "About Us"
+    },
+    "services": {
+      "title": "Our Services"
+    },
+    "contact": {
+      "title": "Contact Us"
+    },
+    "undefined": {
+      "title": "Not Found"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Do you have a question or a project idea? We're happy to help.",
+    "address_sr": "Address",
+    "phone_sr": "Phone",
+    "email_sr": "Email",
+    "form": {
+      "name": "Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Message",
+      "feedback_success": "Thank you for your message! We will contact you as soon as possible.",
+      "feedback_error": "Something went wrong. Please try again later."
+    }
+  },
+  "services": {
+    "specs": "Specifications",
+    "overview": {
+      "title": "Our Services",
+      "description": "Discover how our expertise can elevate your projects to the next level."
+    }
+  },
   "usp": {
-    "title": "Wat maakt qsdfNexxura uniek?",
-    "description": "Bij NEXXURA combineren we passie voor technologie en mechanica met diepgaande expertise in engineering en productie.",
+    "title": "What makes Nexxura unique?",
+    "description": "At NEXXURA, we combine a passion for technology and mechanics with in-depth expertise in engineering and production.",
     "items": [
       {
         "icon": "mdi:sitemap-outline",
-        "title": "Uw Totaalpartner: Van Engineering tot Fabricage",
-        "description": "NEXXURA biedt een compleet traject van concept, engineering en prototyping tot procesoptimalisatie. Alles onder één dak voor maximale efficiëntie."
+        "title": "Your Total Partner: From Engineering to Fabrication",
+        "description": "NEXXURA offers a complete trajectory from concept, engineering and prototyping to process optimization. Everything under one roof for maximum efficiency."
       },
       {
         "icon": "mdi:vector-link",
-        "title": "Naadloze Integratie van Ontwerp en Productie",
-        "description": "Onze engineers en productiespecialisten werken nauw samen. Dit garandeert maakbare ontwerpen en een vlekkeloos traject van idee tot eindproduct."
+        "title": "Seamless Integration of Design and Production",
+        "description": "Our engineers and production specialists work closely together. This guarantees manufacturable designs and a flawless trajectory from idea to end product."
       },
       {
         "icon": "mdi:layers-triple-outline",
-        "title": "Unieke Expertise in Diverse Materialen",
-        "description": "Profiteer van onze brede materiaalexpertise in zowel metaal als kunststof voor de beste en meest duurzame oplossing."
+        "title": "Unique Expertise in Diverse Materials",
+        "description": "Benefit from our broad material expertise in both metal and plastic for the best and most sustainable solution."
       },
       {
         "icon": "mdi:rocket-launch-outline",
-        "title": "Gedreven door Optimalisatie en Prototyping",
-        "description": "NEXXURA blinkt uit in snelle, iteratieve optimalisatie. Gevalideerde concepten resulteren in 'first time right' prototypes."
+        "title": "Driven by Optimization and Prototyping",
+        "description": "NEXXURA excels in fast, iterative optimization. Validated concepts result in 'first time right' prototypes."
       },
       {
         "icon": "mdi:chart-line",
-        "title": "Efficiëntie in Productie en Kostenbesparing",
-        "description": "Wij denken proactief mee om uw producten te analyseren en te verbeteren voor een hoger rendement en lagere kosten."
+        "title": "Efficiency in Production and Cost Savings",
+        "description": "We proactively think along to analyze and improve your products for higher returns and lower costs."
       },
       {
         "icon": "mdi:lightbulb-on-outline",
-        "title": "Innovatieve Maatwerkoplossingen",
-        "description": "Dankzij onze unieke combinatie van engineeringkennis en productietechnieken, ontwikkelen wij creatieve oplossingen op maat."
+        "title": "Innovative Custom Solutions",
+        "description": "Thanks to our unique combination of engineering knowledge and production techniques, we develop creative custom solutions."
       }
     ]
+  },
+  "timeline": {
+    "title": "Our History",
+    "description": "A journey of craftsmanship and innovation, from a humble beginning to a future-oriented enterprise.",
+    "items": [
+      {
+        "date": "1948",
+        "title": "Leys NV",
+        "description": "Founded as a sole proprietorship, with a focus on local craftsmanship."
+      },
+      {
+        "date": "1978",
+        "title": "Acquisition by Son",
+        "description": "The company is passed from father to son and grows into a typical supplier company."
+      },
+      {
+        "date": "2000",
+        "title": "ISO 9001 Certification",
+        "description": "An important milestone confirming our commitment to quality and standardized processes."
+      },
+      {
+        "date": "2024",
+        "title": "Acquisition by Nexxura",
+        "description": "Stronger together, with a shared focus on innovation and quality for the future."
+      }
+    ]
+  },
+  "features": {
+    "title": "What makes Nexxura so unique",
+    "description": "At NEXXURA, we combine a passion for technology and mechanics with expertise in turning, milling and optimization. Thanks to our fully in-house process – from design and strength calculations to production – we offer solutions from A to Z. This makes NEXXURA the ideal partner for downtime or critical work.",
+    "image": "/src/assets/features.png",
+    "items": [
+      {
+        "icon": "mdi:flash",
+        "title": "Quick response to downtime",
+        "description": "We understand that downtime costs money. Thanks to our short communication lines and efficient work structure, we can respond quickly and plan interventions."
+      },
+      {
+        "icon": "mdi:cogs",
+        "title": "Flexibility through extensive machinery",
+        "description": "With a diverse and modern machine park, we are able to deliver custom work, even for complex or urgent assignments."
+      },
+      {
+        "icon": "mdi:clock-fast",
+        "title": "Short lead times",
+        "description": "Through our internal processes and inventory management, we minimize waiting times and guarantee fast delivery."
+      },
+      {
+        "icon": "mdi:magnify-scan",
+        "title": "Proactive and reactive investigation of machine breakdown",
+        "description": "We perform thorough analyses via FEA and CFD to detect problems and prevent future defects."
+      }
+    ]
+  },
+  "faas": {
+    "title": "Factory as a Service (FaaS)",
+    "description": "Factory as a Service (FaaS), 'powered by' Nexxura and Leys NV. By joining forces, you benefit from lower fixed costs, faster time-to-market, high flexibility, reduced risk management, high quality, and predictability.",
+    "image": "/src/assets/faas.png",
+    "items": [
+      {
+        "icon": "mdi:cash-minus",
+        "title": "Lower fixed costs (CAPEX)",
+        "description": "No large investments in your own factories or machines."
+      },
+      {
+        "icon": "mdi:rocket-launch-outline",
+        "title": "Faster time-to-market",
+        "description": "Our workflows enable us to produce parts quickly so that the customer can assemble and deliver within days or weeks."
+      },
+      {
+        "icon": "mdi:shield-check-outline",
+        "title": "Flexibility & risk management",
+        "description": "You only pay for actual consumption and can easily adjust designs."
+      },
+      {
+        "icon": "mdi:chart-donut",
+        "title": "High quality & predictability",
+        "description": "Standardized, measurable processes ensure consistent, reliable results."
+      }
+    ]
+  },
+  "components": {
+    "services_list": {
+      "title": "Our Services in Focus",
+      "description": "An overview of our core activities and specializations.",
+      "read_more": "More information"
+    }
   }
 }
