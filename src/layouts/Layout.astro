@@ -1,23 +1,50 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import SEO from "../components/Seo.astro";
+import Footer from "../components/Footer.astro";
+import '../css/app.css';
+
 export interface Props {
 	title: string;
 	description: string;
-	image?: string;
-	}
+	lang: string;
+}
 
-const { title, description, image } = Astro.props;
-import Footer from "../components/Footer.astro";
-import '../css/app.css';
+const { title, description, lang } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL('/images/preview.png', Astro.url);
+
+const navPaths = {
+	home: `/${lang}/`,
+	about: `/${lang}/${lang === 'nl' ? 'over' : 'about'}`,
+	services: `/${lang}/${lang === 'nl' ? 'diensten' : 'services'}`,
+	contact: `/${lang}/contact`
+};
+
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 <head>
-	<SEO title={title} description={description} image={image} />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{title}</title>
+	<meta name="description" content="A concise and accurate summary of the page's content for search engines.">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="canonical" href={canonicalURL}>
+
+	<meta property="og:title" content={title}>
+	<meta property="og:image" content={socialImageURL}>
+	<meta property="og:url" content={canonicalURL}>
+	<meta property="og:type" content="website">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content={title}>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
-<Navigation />
+<Navigation {navPaths} {lang} />
 <main>
 	<slot />
 </main>

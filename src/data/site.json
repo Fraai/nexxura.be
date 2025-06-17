@@ -1,0 +1,11 @@
+{
+  "name": "Nexxura",
+  "vat": "BE 0123.456.789",
+  "address": {
+    "street": "Ouden Heirweg 73",
+    "postalCode": "9340",
+    "city": "Lede"
+  },
+  "phone": "+32 12 345 67 89",
+  "email": "info@nexxura.be"
+}

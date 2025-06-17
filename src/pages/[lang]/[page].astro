@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {languages} from '../../i18n/config';
+import {useTranslations} from '../../i18n/utils';
+import ContactForm from '../../components/Contact.astro';
+import Usp from "../../components/Usp.astro";
+import Timeline from "../../components/Timeline.astro";
+import Contact from "../../components/Contact.astro";
+import ServicesList from "../../components/ServicesList.astro";
+import Features from "../../components/Features.astro";
+import Title from "../../components/Title.astro";
+
+export function getStaticPaths() {
+    // The 'pages' constant must be defined *inside* getStaticPaths
+    const pages = {
+        en: [
+            {slug: 'services', contentKey: 'services'},
+            {slug: 'about', contentKey: 'about'},
+            {slug: 'contact', contentKey: 'contact'},
+        ],
+        nl: [
+            {slug: 'diensten', contentKey: 'services'},
+            {slug: 'over', contentKey: 'about'},
+            {slug: 'contact', contentKey: 'contact'},
+        ],
+    };
+
+    const paths = [];
+    for (const lang of Object.keys(languages)) {
+        pages[lang].forEach(page => {
+            paths.push({
+                params: {lang, page: page.slug},
+                props: {contentKey: page.contentKey},
+            });
+        });
+    }
+    return paths;
+}
+
+const {lang, page} = Astro.params;
+const {contentKey} = Astro.props;
+const t = useTranslations(lang as keyof typeof languages);
+---
+<Layout title={t(`page.${contentKey}.title`)} lang={lang}>
+    {contentKey === 'about' && (
+            <Features lang={lang as keyof typeof languages} />
+            <Timeline lang={lang as keyof typeof languages} />
+            <Usp lang={lang as keyof typeof languages} />
+            <Contact lang={lang as keyof typeof languages} />
+    )}
+
+    {contentKey === 'services' && (
+            <ServicesList lang={lang as keyof typeof languages} />
+    )}
+
+    {contentKey === 'contact' && (
+            <ContactForm lang={lang as keyof typeof languages} />
+    )}
+</Layout>

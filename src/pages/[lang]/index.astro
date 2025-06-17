@@ -1,0 +1,42 @@
+---
+// --- Start of new required code ---
+
+// 1. Import your language configuration and translation utilities
+import { languages } from '../../i18n/config';
+import { useTranslations } from '../../i18n/utils';
+
+// 2. This function tells Astro which language pages to build
+export function getStaticPaths() {
+    return Object.keys(languages).map(lang => {
+        return { params: { lang } };
+    });
+}
+
+// 3. Get the current language from the URL params
+const { lang } = Astro.params;
+const t = useTranslations(lang as keyof typeof languages);
+
+// --- End of new required code ---
+
+
+// Your existing component imports
+import Layout from '../../layouts/Layout.astro';
+import Usp from "../../components/Usp.astro";
+import Contact from "../../components/Contact.astro";
+import Timeline from "../../components/Timeline.astro";
+import Features from "../../components/Features.astro";
+import Faas from "../../components/Faas.astro";
+import ServicesList from "../../components/ServicesList.astro";
+---
+
+{/* 4. Update the Layout to use the translated title and pass the lang prop
+     for your navigation links to work correctly.
+*/}
+<Layout title={t('page.home.title')} lang={lang}>
+    <Features lang={lang as keyof typeof languages} />
+    <Faas lang={lang as keyof typeof languages} />
+    <ServicesList lang={lang as keyof typeof languages} />
+    <Timeline lang={lang as keyof typeof languages} />
+    <Usp lang={lang as keyof typeof languages} />
+    <Contact lang={lang as keyof typeof languages} />
+</Layout>

@@ -1,22 +1,45 @@
 ---
-
 import { Image } from 'astro:assets';
 import Logo from '../assets/logo.png';
 
+// 1. Import our i18n utilities
+import { useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/config';
+
+// 2. Define the props the component now expects from Layout.astro
+export interface Props {
+    lang: keyof typeof languages;
+    navPaths: {
+        home: string;
+        about: string;
+        services: string;
+        contact: string;
+    }
+}
+
+// 3. Get the props passed from the parent component (Layout.astro)
+const { lang, navPaths } = Astro.props;
+
+// 4. Get the translation function for the current language
+const t = useTranslations(lang);
+
+// 5. Dynamically build the navLinks array using the props and translations
+//    The old, static navLinks array is now gone.
 const navLinks = [
-    { href: "/", text: "Home" },
-    { href: "/nl/over", text: "Over" },
-    { href: "/nl/diensten", text: "Diensten" },
-    { href: "/nl/contact", text: "Contact" },
+    { href: navPaths.home, text: t('nav.home') },
+    { href: navPaths.about, text: t('nav.about') },
+    { href: navPaths.services, text: t('nav.services') },
+    { href: navPaths.contact, text: t('nav.contact') },
 ];
 ---
 
 <header class="text-brand-900 shadow-md">
-    <nav class="container mx-auto px-6 py-4" aria-label="Main Navigation">
+    <nav class="max-w-7xl mx-auto px-6 py-4" aria-label="Main Navigation">
         <div class="flex items-center justify-between">
             <div class="flex items-center">
-                <a href="/" class="text-xl font-bold" aria-label="Homepage">
-                    <Image src={Logo} alt="Logo" height="50" />
+                {/* 6. Update the logo link to be dynamic */}
+                <a href={navPaths.home} class="text-xl font-bold" aria-label="Homepage">
+                    <Image src={Logo} alt="Logo" height="50" loading="eager" />
                 </a>
             </div>
             <div class="hidden md:flex md:items-center md:space-x-6">
@@ -49,7 +72,6 @@ const navLinks = [
 </header>
 
 <script>
-    // Script to toggle mobile menu visibility
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 

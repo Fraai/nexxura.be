@@ -1,40 +1,42 @@
 ---
-import usp from '../data/usp.json';
+import { useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/config';
+import { Icon } from 'astro-icon/components';
 
-type uspItem = {
-    title: string;
-    description: string;
+export interface Props {
+    lang: keyof typeof languages;
 }
 
-type uspData = {
-    title: string;
-    description: string;
-    data: uspItem[];
-}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 
-const uspContent: uspData = usp;
+// We fetch the entire USP object from our translation files
+const uspContent = t('usp');
 ---
 <section class="py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{uspContent.title}</h2>
-            <p class="mt-6 text-lg/8 text-gray-600">{uspContent.description}</p>
+        <div class="mx-auto max-w-3xl text-center">
+            <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                {uspContent.title}
+            </h2>
+            <p class="mt-6 text-lg/8 text-gray-600">
+                {uspContent.description}
+            </p>
         </div>
-        <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {uspContent.data.map((item: UspItem) => (
-                    <div>
-                        <dt class="font-semibold text-gray-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" class="size-4 inline-block mr-1 text-brand-800"
-                                 aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5"/>
-                            </svg>
-                            {item.title}
-                        </dt>
-                        <dd class="mt-1 text-gray-600">{item.description}</dd>
-                    </div>
-            ))}
-        </dl>
+        <div class="mx-auto mt-20 max-w-none">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-base/7 md:grid-cols-2 lg:grid-cols-3">
+                {uspContent.items.map(item => (
+                        <div class="flex flex-col">
+                            <dt class="flex items-center gap-x-3 font-semibold text-gray-900">
+                                <Icon name={item.icon} class="h-8 w-8 flex-none text-brand-800" aria-hidden="true" />
+                                {item.title}
+                            </dt>
+                            <dd class="mt-4 flex flex-auto flex-col text-gray-600">
+                                <p class="flex-auto">{item.description}</p>
+                            </dd>
+                        </div>
+                ))}
+            </dl>
+        </div>
     </div>
 </section>

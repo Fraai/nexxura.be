@@ -1,0 +1,38 @@
+{
+  "usp": {
+    "title": "Wat maakt qsdfNexxura uniek?",
+    "description": "Bij NEXXURA combineren we passie voor technologie en mechanica met diepgaande expertise in engineering en productie.",
+    "items": [
+      {
+        "icon": "mdi:sitemap-outline",
+        "title": "Uw Totaalpartner: Van Engineering tot Fabricage",
+        "description": "NEXXURA biedt een compleet traject van concept, engineering en prototyping tot procesoptimalisatie. Alles onder één dak voor maximale efficiëntie."
+      },
+      {
+        "icon": "mdi:vector-link",
+        "title": "Naadloze Integratie van Ontwerp en Productie",
+        "description": "Onze engineers en productiespecialisten werken nauw samen. Dit garandeert maakbare ontwerpen en een vlekkeloos traject van idee tot eindproduct."
+      },
+      {
+        "icon": "mdi:layers-triple-outline",
+        "title": "Unieke Expertise in Diverse Materialen",
+        "description": "Profiteer van onze brede materiaalexpertise in zowel metaal als kunststof voor de beste en meest duurzame oplossing."
+      },
+      {
+        "icon": "mdi:rocket-launch-outline",
+        "title": "Gedreven door Optimalisatie en Prototyping",
+        "description": "NEXXURA blinkt uit in snelle, iteratieve optimalisatie. Gevalideerde concepten resulteren in 'first time right' prototypes."
+      },
+      {
+        "icon": "mdi:chart-line",
+        "title": "Efficiëntie in Productie en Kostenbesparing",
+        "description": "Wij denken proactief mee om uw producten te analyseren en te verbeteren voor een hoger rendement en lagere kosten."
+      },
+      {
+        "icon": "mdi:lightbulb-on-outline",
+        "title": "Innovatieve Maatwerkoplossingen",
+        "description": "Dankzij onze unieke combinatie van engineeringkennis en productietechnieken, ontwikkelen wij creatieve oplossingen op maat."
+      }
+    ]
+  }
+}

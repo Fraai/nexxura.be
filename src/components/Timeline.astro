@@ -1,36 +1,46 @@
 ---
-import timeline from '../data/timeline.json';
+import { useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/config';
 
-type timelineItem = {
-    title: string;
-    description: string;
-    date: string;
+// 1. The component now accepts 'lang' as a prop
+export interface Props {
+    lang: keyof typeof languages;
 }
 
-type timelineData = {
-    title: string;
-    description: string;
-    data: timelineItem[];
-}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 
-const timelineContent: timelineData = timeline;
+// 2. Fetch all timeline content from the i18n file
+const timelineContent = t('timeline');
 ---
 
 <section class="py-24 sm:py-32 bg-brand-700 text-white">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl mb-16">
+            <h2 class="text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
+                {timelineContent.title}
+            </h2>
+            <p class="mt-6 text-lg/8 text-gray-200">
+                {timelineContent.description}
+            </p>
+        </div>
+
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {timelineContent.data.map((item: timelineItem) => (
+            {timelineContent.items.map(item => (
                     <div>
-                        <time datetime="194" class="flex items-center text-sm/6 font-semibold">
+                        {/* 4. Bug Fix: The datetime attribute is now correctly set to the item's date */}
+                        <time datetime={item.date} class="flex items-center text-sm/6 font-semibold">
                             <svg viewBox="0 0 4 4" class="mr-4 size-1 flex-none" aria-hidden="true">
                                 <circle cx="2" cy="2" r="2" fill="currentColor"/>
                             </svg>
                             {item.date}
-                            <div class="absolute -ml-2 h-px w-screen -translate-x-full bg-white sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
-                                 aria-hidden="true"></div>
+                            <div
+                                    class="absolute -ml-2 h-px w-screen -translate-x-full bg-white/25 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                                    aria-hidden="true">
+                            </div>
                         </time>
                         <p class="mt-6 text-lg/8 font-semibold tracking-tight">{item.title}</p>
-                        <p class="mt-1 text-base/7 ">{item.description}</p>
+                        <p class="mt-1 text-base/7 text-gray-300">{item.description}</p>
                     </div>
             ))}
         </div>

@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content'; // Or a custom type if you prefer
+
+// Define a type for our service object prop for better type safety
+type Service = {
+    slug: string;
+    title: string;
+    paragraphs: string[];
+    details: {
+        specsTitle: string;
+        specifications: { name: string; value: string }[];
+        image: { src: string; alt: string };
+    } | null;
+};
+
+export interface Props {
+    service: Service;
+}
+
+const { service } = Astro.props;
+const { title, paragraphs, details } = service;
+---
+
+<section class="py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl lg:mx-0">
+            <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h2>
+            {paragraphs.map((paragraph) => (
+                    <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8" set:html={paragraph}></p>
+            ))}
+        </div>
+    </div>
+</section>
+
+{details && (
+<div class="overflow-hidden bg-white py-8">
+    <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+            <div class="px-6 md:px-0 lg:pt-4 lg:pr-4">
+                <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                    {details.specsTitle && <h2 class="text-2xl font-bold mb-4">{details.specsTitle}</h2>}
+                    <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                        {details.specifications?.map(spec => (
+                                <div class="flex flex-col">
+                                    <dt class="font-semibold text-gray-700">{spec.name}</dt>
+                                    <dd class="text-gray-900">{spec.value}</dd>
+                                </div>
+                        ))}
+                    </dl>
+                </div>
+            </div>
+            <div class="sm:px-6 lg:px-0">
+                <Image
+                        src={details.image.src}
+                        alt={details.image.alt || title}
+                        class="w-auto h-full object-cover object-center rounded-lg shadow-lg"
+                        width={800}
+                        height={600}
+                />
+            </div>
+        </div>
+    </div>
+</div>
+    )}

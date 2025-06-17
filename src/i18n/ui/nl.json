@@ -1,0 +1,171 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over Ons",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+  "page": {
+    "home": {
+      "title": "Nexxura"
+    },
+    "about": {
+      "title": "Over ons"
+    },
+    "services": {
+      "title": "Onze diensten"
+    },
+    "contact": {
+      "title": "Contacteer ons"
+    },
+    "undefined": {
+      "title": "Niet gevonden"
+    }
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "description": "Heeft u een vraag of een projectidee? We helpen u graag verder.",
+    "address_sr": "Adres",
+    "phone_sr": "Telefoon",
+    "email_sr": "E-mail",
+    "form": {
+      "name": "Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "message": "Bericht",
+      "submit": "Verstuur bericht",
+      "feedback_success": "Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.",
+      "feedback_error": "Er is iets misgegaan. Probeer het later opnieuw."
+    }
+  },
+  "services": {
+    "specs": "Specificaties",
+    "overview": {
+      "title": "Onze Diensten",
+      "description": "Ontdek hoe onze expertise uw projecten naar een hoger niveau kan tillen."
+    }
+  },
+  "usp": {
+    "title": "Wat maakt Nexxura uniek?",
+    "description": "Bij NEXXURA combineren we passie voor technologie en mechanica met diepgaande expertise in engineering en productie.",
+    "items": [
+      {
+        "icon": "mdi:sitemap-outline",
+        "title": "Uw Totaalpartner: Van Engineering tot Fabricage",
+        "description": "NEXXURA biedt een compleet traject van concept, engineering en prototyping tot procesoptimalisatie. Alles onder één dak voor maximale efficiëntie."
+      },
+      {
+        "icon": "mdi:vector-link",
+        "title": "Naadloze Integratie van Ontwerp en Productie",
+        "description": "Onze engineers en productiespecialisten werken nauw samen. Dit garandeert maakbare ontwerpen en een vlekkeloos traject van idee tot eindproduct."
+      },
+      {
+        "icon": "mdi:layers-triple-outline",
+        "title": "Unieke Expertise in Diverse Materialen",
+        "description": "Profiteer van onze brede materiaalexpertise in zowel metaal als kunststof voor de beste en meest duurzame oplossing."
+      },
+      {
+        "icon": "mdi:rocket-launch-outline",
+        "title": "Gedreven door Optimalisatie en Prototyping",
+        "description": "NEXXURA blinkt uit in snelle, iteratieve optimalisatie. Gevalideerde concepten resulteren in 'first time right' prototypes."
+      },
+      {
+        "icon": "mdi:chart-line",
+        "title": "Efficiëntie in Productie en Kostenbesparing",
+        "description": "Wij denken proactief mee om uw producten te analyseren en te verbeteren voor een hoger rendement en lagere kosten."
+      },
+      {
+        "icon": "mdi:lightbulb-on-outline",
+        "title": "Innovatieve Maatwerkoplossingen",
+        "description": "Dankzij onze unieke combinatie van engineeringkennis en productietechnieken, ontwikkelen wij creatieve oplossingen op maat."
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Onze Geschiedenis",
+    "description": "Een reis van vakmanschap en innovatie, van een bescheiden begin tot een toekomstgerichte onderneming.",
+    "items": [
+      {
+        "date": "1948",
+        "title": "Leys NV",
+        "description": "Gesticht als een éénmanszaak, met een focus op lokaal vakmanschap."
+      },
+      {
+        "date": "1978",
+        "title": "Overname door Zoon",
+        "description": "Het bedrijf wordt van vader op zoon doorgegeven en groeit uit tot een typisch toeleveringsbedrijf."
+      },
+      {
+        "date": "2000",
+        "title": "ISO 9001 Certificering",
+        "description": "Een belangrijke mijlpaal die onze toewijding aan kwaliteit en gestandaardiseerde processen bevestigt."
+      },
+      {
+        "date": "2024",
+        "title": "Overname door Nexxura",
+        "description": "Samen sterker, met een gezamenlijke focus op innovatie en kwaliteit voor de toekomst."
+      }
+    ]
+  },
+  "features": {
+    "title": "Wat Nexxura zo uniek maakt",
+    "description": "Bij NEXXURA combineren we passie voor technologie en mechanica met expertise in draaien, frezen en optimalisatie. Dankzij ons volledig inhouse proces – van ontwerp en sterkteberekeningen tot productie – bieden we oplossingen van A tot Z. Hierdoor is NEXXURA de ideale partner bij stilstand of kritische werken.",
+    "image": "/src/assets/features.png",
+    "items": [
+      {
+        "icon": "mdi:flash",
+        "title": "Snel schakelen bij stilstand",
+        "description": "We begrijpen dat stilstand geld kost. Dankzij onze korte communicatielijnen en efficiënte werkstructuur kunnen we razendsnel schakelen en interventies plannen."
+      },
+      {
+        "icon": "mdi:cogs",
+        "title": "Flexibiliteit door uitgebreid machinepark",
+        "description": "Met een divers en modern machinepark zijn we in staat om maatwerk te leveren, zelfs bij complexe of urgente opdrachten."
+      },
+      {
+        "icon": "mdi:clock-fast",
+        "title": "Korte doorlooptijden",
+        "description": "Door onze interne processen en voorraadbeheer minimaliseren we wachttijden en garanderen we een snelle oplevering."
+      },
+      {
+        "icon": "mdi:magnify-scan",
+        "title": "Proactief en reactief onderzoek bij machinebreuk",
+        "description": "We voeren grondige analyses uit via FEA en CFD om problemen te detecteren en toekomstige defecten te voorkomen."
+      }
+    ]
+  },
+  "faas": {
+    "title": "Factory as a Service (FaaS)",
+    "description": "Factory as a Service (FaaS), 'powered by' Nexxura en Leys NV. Door onze krachten te bundelen, geniet jij van lagere vaste kosten, snellere time-to-market, hoge flexibiliteit, een verlaagd risicobeheer, hoge kwaliteit en voorspelbaarheid.",
+    "image": "/src/assets/faas.png",
+    "items": [
+      {
+        "icon": "mdi:cash-minus",
+        "title": "Lagere vaste kosten (CAPEX)",
+        "description": "Geen grote investeringen in eigen fabrieken of machines."
+      },
+      {
+        "icon": "mdi:rocket-launch-outline",
+        "title": "Snellere time-to-market",
+        "description": "Onze workflows stellen ons in staat snel onderdelen te produceren zodat de klant binnen enkele dagen of weken kan assembleren en leveren."
+      },
+      {
+        "icon": "mdi:shield-check-outline",
+        "title": "Flexibiliteit & risicobeheer",
+        "description": "Je betaalt alleen voor werkelijke afname en kunt eenvoudig ontwerpen bijsturen."
+      },
+      {
+        "icon": "mdi:chart-donut",
+        "title": "Hoge kwaliteit & voorspelbaarheid",
+        "description": "Gestandaardiseerde, meetbare processen zorgen voor consistente, betrouwbare resultaten."
+      }
+    ]
+  },
+  "components": {
+    "services_list": {
+      "title": "Onze Diensten in de Kijker",
+      "description": "Een overzicht van onze kernactiviteiten en specialisaties.",
+      "read_more": "Meer informatie"
+    }
+  }
+}
