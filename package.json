@@ -4,7 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "dev:nexxura": "SITE_ID=nexxura astro dev --port 4321",
+    "dev:leys": "SITE_ID=leys astro dev --port 4322",
+    "build:nexxura": "SITE_ID=nexxura astro build",
+    "build:leys": "SITE_ID=leys astro build",
+    "build": "npm run build:nexxura && npm run build:leys",
     "preview": "astro preview",
     "astro": "astro"
   },

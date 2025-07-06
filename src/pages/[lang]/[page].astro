@@ -8,6 +8,7 @@ import Timeline from "../../components/Timeline.astro";
 import Contact from "../../components/Contact.astro";
 import ServicesList from "../../components/ServicesList.astro";
 import Features from "../../components/Features.astro";
+import Faas from "../../components/Faas.astro";
 
 export function getStaticPaths() {
     // The 'pages' constant must be defined *inside* getStaticPaths
@@ -20,6 +21,7 @@ export function getStaticPaths() {
         nl: [
             {slug: 'diensten', contentKey: 'services'},
             {slug: 'over', contentKey: 'about'},
+            {slug: 'faas', contentKey: 'faas'},
             {slug: 'contact', contentKey: 'contact'},
         ],
     };
@@ -50,6 +52,12 @@ const t = useTranslations(lang as keyof typeof languages);
 
     {contentKey === 'services' && (
             <ServicesList lang={lang as keyof typeof languages} />
+            <Contact lang={lang as keyof typeof languages} />
+    )}
+
+    {contentKey === 'faas' && (
+        <Faas lang={lang as keyof typeof languages} />
+            <ContactForm lang={lang as keyof typeof languages} />
     )}
 
     {contentKey === 'contact' && (

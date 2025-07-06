@@ -2,6 +2,10 @@
 import { useTranslations } from '../i18n/utils';
 import { languages } from '../i18n/config';
 
+// Get the site configuration consistently from environment variables
+const siteConfig = import.meta.env.SITE_CONFIG;
+const siteName = siteConfig?.name || '';
+
 // 1. The component now accepts 'lang' as a prop
 export interface Props {
     lang: keyof typeof languages;
@@ -11,6 +15,7 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 // 2. Fetch all timeline content from the i18n file
+// We still fetch the whole object, but we'll manually process nested strings
 const timelineContent = t('timeline');
 ---
 
@@ -39,8 +44,10 @@ const timelineContent = t('timeline');
                                     aria-hidden="true">
                             </div>
                         </time>
-                        <p class="mt-6 text-lg/8 font-semibold tracking-tight">{item.title}</p>
-                        <p class="mt-1 text-base/7 text-gray-300">{item.description}</p>
+                        {/* Apply replacement for item.title */}
+                        <p class="mt-6 text-lg/8 font-semibold tracking-tight">{item.title.replace(/{name}/g, siteName)}</p>
+                        {/* Apply replacement for item.description */}
+                        <p class="mt-1 text-base/7 text-gray-300">{item.description.replace(/{name}/g, siteName)}</p>
                     </div>
             ))}
         </div>

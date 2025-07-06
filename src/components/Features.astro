@@ -10,20 +10,24 @@ export interface Props {
 const {lang} = Astro.props;
 const t = useTranslations(lang);
 
-const featureContent = t('features');
+// Retrieve individual translated strings
+const featuresTitle = t('features.title');
+const featuresDescription = t('features.description');
+const featuresImage = t('features.image'); // Get the image path if it's within 'features' object
+const featuresItems = t('features.items'); // This will return the array of items
 
 const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{png,jpg,jpeg,webp}');
-const featureImageModule = allImages[featureContent.image];
+const featureImageModule = allImages[featuresImage]; // Use the retrieved image path
 ---
 <div class="overflow-hidden py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pt-4 lg:pr-8">
                 <div class="lg:max-w-lg">
-                    <p class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{featureContent.title}</p>
-                    <p class="mt-6 text-lg/8 text-gray-600">{featureContent.description}</p>
+                    <p class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{featuresTitle}</p>
+                    <p class="mt-6 text-lg/8 text-gray-600">{featuresDescription}</p>
                     <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-                        {featureContent.items.map(item => (
+                        {featuresItems.map(item => (
                                 <div class="relative pl-9">
                                     <dt class="inline font-semibold text-gray-900">
                                         <Icon name={item.icon} class="absolute top-1 left-1 h-5 w-5 text-brand-600"/>
@@ -38,7 +42,7 @@ const featureImageModule = allImages[featureContent.image];
             {featureImageModule && (
                     <Image
                             src={featureImageModule()}
-                            alt={featureContent.title}
+                            alt={featuresTitle} {/* Use the translated title for the alt text */}
                             class="w-full max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 max-h-[800px] object-cover"
                             width="700"
                             height="500"

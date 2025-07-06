@@ -7,7 +7,7 @@
   },
   "page": {
     "home": {
-      "title": "Nexxura"
+      "title": "{name}"
     },
     "about": {
       "title": "About Us"
@@ -46,13 +46,13 @@
     }
   },
   "usp": {
-    "title": "What makes Nexxura unique?",
-    "description": "At NEXXURA, we combine a passion for technology and mechanics with in-depth expertise in engineering and production.",
+    "title": "What makes {name} unique?",
+    "description": "At {name}}, we combine a passion for technology and mechanics with in-depth expertise in engineering and production.",
     "items": [
       {
         "icon": "mdi:sitemap-outline",
         "title": "Your Total Partner: From Engineering to Fabrication",
-        "description": "NEXXURA offers a complete trajectory from concept, engineering and prototyping to process optimization. Everything under one roof for maximum efficiency."
+        "description": "{name}} offers a complete trajectory from concept, engineering and prototyping to process optimization. Everything under one roof for maximum efficiency."
       },
       {
         "icon": "mdi:vector-link",
@@ -67,7 +67,7 @@
       {
         "icon": "mdi:rocket-launch-outline",
         "title": "Driven by Optimization and Prototyping",
-        "description": "NEXXURA excels in fast, iterative optimization. Validated concepts result in 'first time right' prototypes."
+        "description": "{name}} excels in fast, iterative optimization. Validated concepts result in 'first time right' prototypes."
       },
       {
         "icon": "mdi:chart-line",
@@ -102,14 +102,14 @@
       },
       {
         "date": "2024",
-        "title": "Acquisition by Nexxura",
+        "title": "Acquisition by {name}",
         "description": "Stronger together, with a shared focus on innovation and quality for the future."
       }
     ]
   },
   "features": {
-    "title": "What makes Nexxura so unique",
-    "description": "At NEXXURA, we combine a passion for technology and mechanics with expertise in turning, milling and optimization. Thanks to our fully in-house process – from design and strength calculations to production – we offer solutions from A to Z. This makes NEXXURA the ideal partner for downtime or critical work.",
+    "title": "What makes {name} so unique",
+    "description": "At {name}}, we combine a passion for technology and mechanics with expertise in turning, milling and optimization. Thanks to our fully in-house process – from design and strength calculations to production – we offer solutions from A to Z. This makes {name}} the ideal partner for downtime or critical work.",
     "image": "/src/assets/features.png",
     "items": [
       {
@@ -136,7 +136,7 @@
   },
   "faas": {
     "title": "Factory as a Service (FaaS)",
-    "description": "Factory as a Service (FaaS), 'powered by' Nexxura and Leys NV. By joining forces, you benefit from lower fixed costs, faster time-to-market, high flexibility, reduced risk management, high quality, and predictability.",
+    "description": "Factory as a Service (FaaS), 'powered by' {name} and Leys NV. By joining forces, you benefit from lower fixed costs, faster time-to-market, high flexibility, reduced risk management, high quality, and predictability.",
     "image": "/src/assets/faas.png",
     "items": [
       {

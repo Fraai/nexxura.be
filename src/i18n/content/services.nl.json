@@ -2,11 +2,11 @@
   {
     "slug": "frezen",
     "title": "Frezen",
-    "short_description": "Dankzij ons geavanceerde machinepark met diverse verticale centra en 5-assige bewerkingsmachines kunnen we bij NEXXURA werkstukken bewerken tot 4500 × 2500 × 1600 mm en 5 ton met IT6-nauwkeurigheid, zodat we zowel eenvoudige als complexe maatwerkoplossingen van hoogwaardige kwaliteit kunnen leveren",
+    "short_description": "Dankzij ons geavanceerde machinepark met diverse verticale centra en 5-assige bewerkingsmachines kunnen we bij {name} werkstukken bewerken tot 4500 × 2500 × 1600 mm en 5 ton met IT6-nauwkeurigheid, zodat we zowel eenvoudige als complexe maatwerkoplossingen van hoogwaardige kwaliteit kunnen leveren",
     "feature_image": "/src/assets/diensten/frezen/feature.png",
     "paragraphs": [
-      "Ons geavanceerd machinepark stelt ons in staat om kleine, grote én complexe onderdelen te bewerken. Dankzij onze diverse verticale machinecenters en 5-assige bewerkingscentra kunnen we bij Nexxura werkstukken aan tot 4500 mm (X-as), 2500 mm (Y-as), 1600 mm (Z-as) en een gewicht tot standaard 5 ton.",
-      "Dankzij onze precisiebewerkingen, met een tolerantieniveau van IT6, levert Nexxura hoogwaardige oplossingen die perfect aansluiten op jouw behoeften. Of het nu gaat om eenvoudige componenten of complexe maatwerkprojecten, wij garanderen kwaliteit en vakmanschap."
+      "Ons geavanceerd machinepark stelt ons in staat om kleine, grote én complexe onderdelen te bewerken. Dankzij onze diverse verticale machinecenters en 5-assige bewerkingscentra kunnen we bij {name} werkstukken aan tot 4500 mm (X-as), 2500 mm (Y-as), 1600 mm (Z-as) en een gewicht tot standaard 5 ton.",
+      "Dankzij onze precisiebewerkingen, met een tolerantieniveau van IT6, levert {name} hoogwaardige oplossingen die perfect aansluiten op jouw behoeften. Of het nu gaat om eenvoudige componenten of complexe maatwerkprojecten, wij garanderen kwaliteit en vakmanschap."
     ],
     "details": [
       {
@@ -100,7 +100,7 @@
     "feature_image": "/src/assets/diensten/draaien/feature.png",
     "paragraphs": [
       "Ons machinepark omvat CNC-draaibanken in diverse configuraties, van 2-assige standaardmachines tot modellen met live tooling. Hiermee kunnen we zowel eenvoudige als complexe draaiwerkzaamheden uitvoeren.",
-      "Bij Nexxura bewerken we werkstukken met een maximale lengte van 5000 mm tussen de centers, met een Ø1300 mm en een gewicht tot 4 ton en dit met een tolerantieniveau van IT6. Of het nu gaat om precisiewerk of grotere projecten, wij garanderen vakmanschap en kwaliteit op maat van jouw wensen."
+      "Bij {name} bewerken we werkstukken met een maximale lengte van 5000 mm tussen de centers, met een Ø1300 mm en een gewicht tot 4 ton en dit met een tolerantieniveau van IT6. Of het nu gaat om precisiewerk of grotere projecten, wij garanderen vakmanschap en kwaliteit op maat van jouw wensen."
     ],
     "details": [
       {
@@ -116,16 +116,121 @@
             "value": "46kW"
           }
         ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "F35",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "380mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "1200mm"
+          }
+        ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "ACT35",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "350 mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "610 mm"
+          }
+        ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "F20",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "250 mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "500 mm"
+          }
+        ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "SOTOS",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "680 mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "2000 mm"
+          }
+        ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "SUI125",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "1250 mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "30000 mm"
+          }
+        ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "GEMINIS GHT5",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "1300 mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "4000 mm"
+          }
+        ]
+      },
+      {
+        "specsTitleKey": null,
+        "title": "SBL 500 + C-AS",
+        "image": null,
+        "specifications": [
+          {
+            "name": "Diameter",
+            "value": "254 mm"
+          },
+          {
+            "name": "Lengte",
+            "value": "700 mm"
+          }
+        ]
       }
     ]
   },
   {
     "slug": "lassen",
     "title": "Lassen",
-    "short_description": "NEXXURA realiseert hoogwaardige lasconstructies, van eenvoudige tot complexe projecten, met expertise in MIG- en TIG-lassen voor uiteenlopende toepassingen en materialen zoals staal en roestvrij staal.",
+    "short_description": "{name} realiseert hoogwaardige lasconstructies, van eenvoudige tot complexe projecten, met expertise in MIG- en TIG-lassen voor uiteenlopende toepassingen en materialen zoals staal en roestvrij staal.",
     "feature_image": "/src/assets/diensten/lassen/feature.png",
     "paragraphs": [
-      "Bij Nexxura realiseren we hoogwaardige lasconstructies, zowel voor eenvoudige als complexe projecten. Met expertise in MIG- en TIG-lassen, leveren wij op maat gemaakte oplossingen voor diverse toepassingen in verschillende materialen.",
+      "Bij {name} realiseren we hoogwaardige lasconstructies, zowel voor eenvoudige als complexe projecten. Met expertise in MIG- en TIG-lassen, leveren wij op maat gemaakte oplossingen voor diverse toepassingen in verschillende materialen.",
       "Onze vakbekwame lassers zorgen voor sterke en duurzame verbindingen, met oog voor detail en nauwkeurigheid. Of het nu gaat om constructies in staal, roestvrij staal of andere metalen, wij garanderen topkwaliteit en precisie in elk laswerk.",
       "Van ontwerp tot uitvoering, wij bieden complete lasoplossingen die voldoen aan de hoogste industriële standaarden."
     ],
@@ -134,12 +239,12 @@
   {
     "slug": "kunststofproductie",
     "title": "Kunststofproductie",
-    "short_description": "NEXXURA biedt één totaaloplossing voor kunststofproductie, met 3D-printing (FFF, SLA, SLM) en spuitgieten van kleine tot middelgrote series in diverse thermoplasten (ABS, PP, PE, TPE), zodat we altijd de juiste technologie voor prototype- of serieproductie inzetten.",
+    "short_description": "{name} biedt één totaaloplossing voor kunststofproductie, met 3D-printing (FFF, SLA, SLM) en spuitgieten van kleine tot middelgrote series in diverse thermoplasten (ABS, PP, PE, TPE), zodat we altijd de juiste technologie voor prototype- of serieproductie inzetten.",
     "feature_image": "/src/assets/diensten/kunststof/feature.png",
     "paragraphs": [
-      "Bij Nexxura bieden we een complete oplossing van 3D-printing tot spuitgietwerk. We hebben de mogelijkheid om kunststofproducten te spuitgieten. Hierbij focussen we op kleine tot middelgrote series. Onze spuitgietmachines kunnen diverse materialen verwerken, waaronder thermoplasten zoals ABS, polypropyleen, polyethyleen, polystyreen en meer.\n",
+      "Bij {name} bieden we een complete oplossing van 3D-printing tot spuitgietwerk. We hebben de mogelijkheid om kunststofproducten te spuitgieten. Hierbij focussen we op kleine tot middelgrote series. Onze spuitgietmachines kunnen diverse materialen verwerken, waaronder thermoplasten zoals ABS, polypropyleen, polyethyleen, polystyreen en meer.\n",
       "3D-printing van FFF, SLA, SLM  behoort eveneens tot onze mogelijkheden. Hierdoor kunnen we altijd de juiste technologie en het juiste materiaal kiezen voor jouw project. Samen met jou bepalen we de beste oplossing, of het nu gaat om prototypebouw of serieproductie.",
-      "Met Nexxura kies je voor veelzijdigheid, innovatie en maatwerk, zodat jouw productideeën snel en efficiënt gerealiseerd worden."
+      "Met {name} kies je voor veelzijdigheid, innovatie en maatwerk, zodat jouw productideeën snel en efficiënt gerealiseerd worden."
     ],
     "details": [
       {
@@ -180,30 +285,36 @@
     "short_description": "Met decennialange ervaring in tekenwerk en engineering en hands-on expertise in alle industrieën levert ons gepassioneerde team innovatieve maatwerkoplossingen voor de meest complexe uitdagingen.",
     "feature_image": "/src/assets/diensten/engineering/feature.png",
     "paragraphs": [
-      "Wij bouwen op jarenlange ervaring in tekenwerk en engineering. Bovendien beschikken we bij Nexxura over hands-on expertise in alle takken van de industrie. Ons team heeft niet alleen een grondige technische kennis, maar ook de praktijkervaring die nodig is om complexe uitdagingen aan te gaan.",
+      "Wij bouwen op jarenlange ervaring in tekenwerk en engineering. Bovendien beschikken we bij {name} over hands-on expertise in alle takken van de industrie. Ons team heeft niet alleen een grondige technische kennis, maar ook de praktijkervaring die nodig is om complexe uitdagingen aan te gaan.",
       "Onze mentaliteit heeft ons geholpen om voortdurend te groeien, te innoveren en maatwerkoplossingen te leveren die écht werken. Kies voor ons en ervaar engineering vanuit passie, ervaring en een streven naar perfectie."
     ],
     "details": []
   },
   {
-    "slug": "optimalisatie",
-    "title": "Optimalisatie",
-    "short_description": "Nexxura combineert diepgaande FEA- en CFD-expertise met een hands-on mentaliteit en jarenlange praktijkervaring, waardoor we realistische, effectieve en haalbare oplossingen voor complexe technische vraagstukken leveren.",
-    "feature_image": "/src/assets/diensten/optimalisatie/feature.png",
+    "slug": "finite-element-analysis",
+    "title": "Finite Element Analysis",
+    "short_description": "Bij {name} staat expertise in FEA (Finite Element Analysis) centraal. Sterkteberekeningen op mechanische constructies behoren tot onze core business.",
+    "feature_image": "/src/assets/diensten/fea/feature.png",
     "paragraphs": [
-      "Bij Nexxura staat expertise in FEA (Finite Element Analysis) en CFD (Computational Fluid Dynamics) centraal. Sterkteberekeningen op mechanische constructies en vloeistofdynamica behoren tot onze core business.",
-      "Nexxura wordt geleid door een technisch expert met doorgedreven kennis en een hands-on mentaliteit. Gedreven door de zoektocht naar realistische en werkbare oplossingen, heeft hij jarenlang nauw samengewerkt met klanten om complexe vraagstukken op te lossen.",
-      "Deze ervaring heeft geleid tot een sterke affiniteit met de materie en de mogelijkheid om technische uitdagingen met een praktische insteek aan te pakken. Nexxura combineert diepgaande kennis met een focus op haalbare, effectieve resultaten."
+      "Bij {name} staat expertise in FEA (Finite Element Analysis) centraal. Sterkteberekeningen op mechanische constructies behoren tot onze core business.",
+      "{name} wordt geleid door een technisch expert met doorgedreven kennis en een hands-on mentaliteit. Gedreven door de zoektocht naar realistische en werkbare oplossingen, heeft hij jarenlang nauw samengewerkt met klanten om complexe vraagstukken op te lossen.",
+      "Deze ervaring heeft geleid tot een sterke affiniteit met de materie en de mogelijkheid om technische uitdagingen met een praktische insteek aan te pakken. {name} combineert diepgaande kennis met een focus op haalbare, effectieve resultaten."
     ],
-    "details": []
+    "details": [
+      {
+        "image": "/src/assets/diensten/fea/feature.png"
+      }
+    ]
   },
   {
-    "slug": "betonwerken",
-    "title": "Betonwerken",
-    "short_description": "Specialistische bewerkingen gerelateerd aan beton, zoals het maken van precieze mallen, het boren of zagen in betonconstructies, of andere specifieke toepassingen waar nauwkeurigheid vereist is.",
-    "feature_image": "/src/assets/diensten/betonwerken/feature.png",
+    "slug": "computational-fluid-dynamics",
+    "title": "Computational Fluid Dynamics",
+    "short_description": "Onder leiding van een hands-on technisch specialist met diepgaande expertise, onderzoeken we steeds naar realistische én toepasbare oplossingen",
+    "feature_image": "/src/assets/diensten/cfd/feature.png",
     "paragraphs": [
-      "ONTBREEKT"
+      "Computational Fluid Dynamics (CFD) is één van onze passies. Onder leiding van een hands-on technisch specialist met diepgaande expertise, onderzoeken we steeds naar realistische én toepasbare oplossingen.",
+      "Dankzij jarenlange, intensieve samenwerking met onze klanten weten we complexe vraagstukken efficiënt te doorgronden en op te lossen. Die praktijkervaring heeft niet alleen onze passie voor het vak versterkt, maar ook ons vermogen om technische uitdagingen met een pragmatische instelling te tackelen.",
+      "Kortom: {name} koppelt grondige vakkennis aan een duidelijke focus op haalbare, resultaatgerichte oplossingen."
     ],
     "details": []
   },
@@ -214,14 +325,14 @@
     "feature_image": "/src/assets/diensten/prototyping/feature.png",
     "paragraphs": [
       "Wij zijn jouw ideale partner op vlak van prototyping. Dankzij onze ruime ervaring in verschillende hoogtechnologische domeinen) – van engineering en 3D-printing tot verspaning, laswerk en spuitgieten – bieden we een complete totaaloplossing.",
-      "Dankzij ons volledig inhouse proces, houden we bij Nexxura de hele keten in handen, waardoor we de doorlooptijd minimaliseren en snel kunnen schakelen. Of het nu gaat om een eerste concept of een functioneel prototype, wij leveren kwaliteit op korte termijn, perfect afgestemd op jouw behoeften."
+      "Dankzij ons volledig inhouse proces, houden we bij {name} de hele keten in handen, waardoor we de doorlooptijd minimaliseren en snel kunnen schakelen. Of het nu gaat om een eerste concept of een functioneel prototype, wij leveren kwaliteit op korte termijn, perfect afgestemd op jouw behoeften."
     ],
     "details": []
   },
   {
     "slug": "innovatie",
     "title": "Innovatie",
-    "short_description": "NEXXURA werkt aan een innovatief concept dat voor veel bedrijven het verschil zal maken. Wat het precies is? Dat blijft nog even een verrassing... To be continued.",
+    "short_description": "{name} werkt aan een innovatief concept dat voor veel bedrijven het verschil zal maken. Wat het precies is? Dat blijft nog even een verrassing... To be continued.",
     "feature_image": "/src/assets/diensten/innovatie/feature.png",
     "paragraphs": [
       "Wij werken aan een innovatief concept dat voor veel bedrijven het verschil zal maken. Wat het precies is? Dat blijft nog even een verrassing... To be continued."

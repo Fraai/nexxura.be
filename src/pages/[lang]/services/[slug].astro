@@ -29,18 +29,24 @@ export async function getStaticPaths() {
 
 const { lang, slug } = Astro.params;
 const { service } = Astro.props;
-const { title, paragraphs, details, show_usp_component } = service;
+// Destructure all relevant properties from 'service', including short_description if you use it
+const { title, short_description, paragraphs, details, show_usp_component } = service;
 const t = useTranslations(lang as keyof typeof languages);
+
+// Get the site configuration directly from the environment variables,
+// consistent with how useTranslations gets it.
+const siteConfig = import.meta.env.SITE_CONFIG;
+const siteName = siteConfig?.name || ''; // This will be "Nexxura" or "Leys"
 
 const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/diensten/**/*.{png,jpg,jpeg,webp}');
 ---
-<Layout {title} lang={lang}>
+<Layout title={title} lang={lang}>
     <section class="py-16">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-4xl lg:mx-0">
-                <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h2>
+                <h1 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">{title}</h1>
                 {paragraphs.map(paragraph => (
-                        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">{paragraph}</p>
+                        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">{paragraph.replace(/{name}/g, siteName)}</p>
                 ))}
             </div>
         </div>
@@ -48,17 +54,23 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/dien
 
     {details && details.length > 0 && details.map(detail => {
         const imageModule = allImages[detail.image];
-        if (!imageModule) return null;
+
         return (
                 <div class="overflow-hidden bg-white py-8">
                     <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
-                        <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                        <div class={`grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 ${imageModule ? 'lg:grid-cols-2 lg:items-start' : ''}`}>
                             <div class="px-6 md:px-0 lg:pt-4 lg:pr-4">
                                 <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-                                    <h2 class="text-2xl font-bold mb-4">{t(detail.specsTitleKey)}</h2>
+                                    {/* Conditionally render the title only if specsTitleKey exists */}
+                                    {detail.specsTitleKey && (
+                                            <h2 class="text-2xl font-bold mb-4">{t(detail.specsTitleKey)}</h2>
+                                    )}
+                                    {detail.title && (
+                                            <h2 class="text-2xl font-bold mb-4">{t(detail.title)}</h2>
+                                    )}
                                     <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                                         {detail.specifications?.map(spec => (
-                                                <div class="flex flex-col">
+                                                <div class="flex flex-col" key={spec.name}>
                                                     <dt class="font-semibold text-gray-700">{spec.name}</dt>
                                                     <dd class="text-gray-900">{spec.value}</dd>
                                                 </div>
@@ -66,15 +78,17 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/dien
                                     </dl>
                                 </div>
                             </div>
-                            <div class="sm:px-6 lg:px-0">
-                                <Image
-                                        src={imageModule()}
-                                        alt={detail.image.alt || title}
-                                        class="w-auto h-full object-cover object-center"
-                                        width={800}
-                                        height={600}
-                                />
-                            </div>
+                            {imageModule && (
+                                    <div class="sm:px-6 lg:px-0">
+                                        <Image
+                                                src={imageModule()}
+                                                alt={detail.image.alt || title}
+                                                class="w-auto h-full object-cover object-center"
+                                                width={800}
+                                                height={600}
+                                        />
+                                    </div>
+                            )}
                         </div>
                     </div>
                 </div>

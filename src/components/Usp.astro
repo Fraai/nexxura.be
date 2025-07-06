@@ -3,6 +3,10 @@ import { useTranslations } from '../i18n/utils';
 import { languages } from '../i18n/config';
 import { Icon } from 'astro-icon/components';
 
+// Get the site configuration consistently from environment variables
+const siteConfig = import.meta.env.SITE_CONFIG;
+const siteName = siteConfig?.name || '';
+
 export interface Props {
     lang: keyof typeof languages;
 }
@@ -11,16 +15,17 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 // We fetch the entire USP object from our translation files
+// We'll manually process nested strings with {name}
 const uspContent = t('usp');
 ---
 <section class="py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
             <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                {uspContent.title}
+                {uspContent.title.replace(/{name}/g, siteName)} {/* Apply replacement here */}
             </h2>
             <p class="mt-6 text-lg/8 text-gray-600">
-                {uspContent.description}
+                {uspContent.description.replace(/{name}/g, siteName)} {/* Apply replacement here */}
             </p>
         </div>
         <div class="mx-auto mt-20 max-w-none">
@@ -29,10 +34,10 @@ const uspContent = t('usp');
                         <div class="flex flex-col">
                             <dt class="flex items-center gap-x-3 font-semibold text-gray-900">
                                 <Icon name={item.icon} class="h-8 w-8 flex-none text-brand-800" aria-hidden="true" />
-                                {item.title}
+                                {item.title} {/* item.title does not contain {name} in the JSON, so no replacement needed */}
                             </dt>
                             <dd class="mt-4 flex flex-auto flex-col text-gray-600">
-                                <p class="flex-auto">{item.description}</p>
+                                <p class="flex-auto">{item.description.replace(/{name}/g, siteName)}</p> {/* Apply replacement here */}
                             </dd>
                         </div>
                 ))}

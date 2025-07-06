@@ -1,7 +1,8 @@
 ---
+import '../css/app.css';
+
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-import '../css/app.css';
 
 export interface Props {
 	title: string;
@@ -9,6 +10,7 @@ export interface Props {
 	lang: string;
 }
 
+const site = import.meta.env.SITE_CONFIG;
 const { title, description, lang } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL('/images/preview.png', Astro.url);
@@ -22,11 +24,11 @@ const navPaths = {
 
 ---
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-theme={site.theme}>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{title}</title>
+	<title>{title} - {site.name}</title>
 	<meta name="description" content="A concise and accurate summary of the page's content for search engines.">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="canonical" href={canonicalURL}>

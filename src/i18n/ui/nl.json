@@ -7,7 +7,7 @@
   },
   "page": {
     "home": {
-      "title": "Nexxura"
+      "title": "Home"
     },
     "about": {
       "title": "Over ons"
@@ -24,7 +24,7 @@
   },
   "contact": {
     "title": "Neem contact op",
-    "description": "Heeft u een vraag of een projectidee? We helpen u graag verder.",
+    "description": "Heeft u een vraag of een projectidee? Neem contact met ons op via het formulier — we helpen u zo snel mogelijk verder.",
     "address_sr": "Adres",
     "phone_sr": "Telefoon",
     "email_sr": "E-mail",
@@ -46,13 +46,13 @@
     }
   },
   "usp": {
-    "title": "Wat maakt Nexxura uniek?",
-    "description": "Bij NEXXURA combineren we passie voor technologie en mechanica met diepgaande expertise in engineering en productie.",
+    "title": "Wat maakt {name} uniek?",
+    "description": "Bij {name} combineren we passie voor technologie en mechanica met diepgaande expertise in engineering en productie.",
     "items": [
       {
         "icon": "mdi:sitemap-outline",
         "title": "Uw Totaalpartner: Van Engineering tot Fabricage",
-        "description": "NEXXURA biedt een compleet traject van concept, engineering en prototyping tot procesoptimalisatie. Alles onder één dak voor maximale efficiëntie."
+        "description": "{name} biedt een compleet traject van concept, engineering en prototyping tot procesoptimalisatie. Alles onder één dak voor maximale efficiëntie."
       },
       {
         "icon": "mdi:vector-link",
@@ -67,7 +67,7 @@
       {
         "icon": "mdi:rocket-launch-outline",
         "title": "Gedreven door Optimalisatie en Prototyping",
-        "description": "NEXXURA blinkt uit in snelle, iteratieve optimalisatie. Gevalideerde concepten resulteren in 'first time right' prototypes."
+        "description": "{name} blinkt uit in snelle, iteratieve optimalisatie. Gevalideerde concepten resulteren in 'first time right' prototypes."
       },
       {
         "icon": "mdi:chart-line",
@@ -91,9 +91,9 @@
         "description": "Gesticht als een éénmanszaak, met een focus op lokaal vakmanschap."
       },
       {
-        "date": "1978",
-        "title": "Overname door Zoon",
-        "description": "Het bedrijf wordt van vader op zoon doorgegeven en groeit uit tot een typisch toeleveringsbedrijf."
+        "date": "1981",
+        "title": "Verhuis nieuwe site",
+        "description": "Leys breidt uit en verhuist naar een site te Industriezone Zuid-III in Erembodegem"
       },
       {
         "date": "2000",
@@ -102,14 +102,14 @@
       },
       {
         "date": "2024",
-        "title": "Overname door Nexxura",
+        "title": "Samenwerking met {name}",
         "description": "Samen sterker, met een gezamenlijke focus op innovatie en kwaliteit voor de toekomst."
       }
     ]
   },
   "features": {
-    "title": "Wat Nexxura zo uniek maakt",
-    "description": "Bij NEXXURA combineren we passie voor technologie en mechanica met expertise in draaien, frezen en optimalisatie. Dankzij ons volledig inhouse proces – van ontwerp en sterkteberekeningen tot productie – bieden we oplossingen van A tot Z. Hierdoor is NEXXURA de ideale partner bij stilstand of kritische werken.",
+    "title": "Wat {name} zo uniek maakt",
+    "description": "Bij {name} combineren we passie voor technologie en mechanica met expertise in draaien, frezen en optimalisatie. Dankzij ons volledig inhouse proces – van ontwerp en sterkteberekeningen tot productie – bieden we oplossingen van A tot Z. Hierdoor is {name} de ideale partner bij stilstand of kritische werken.",
     "image": "/src/assets/features.png",
     "items": [
       {
@@ -136,7 +136,7 @@
   },
   "faas": {
     "title": "Factory as a Service (FaaS)",
-    "description": "Factory as a Service (FaaS), 'powered by' Nexxura en Leys NV. Door onze krachten te bundelen, geniet jij van lagere vaste kosten, snellere time-to-market, hoge flexibiliteit, een verlaagd risicobeheer, hoge kwaliteit en voorspelbaarheid.",
+    "description": "Factory as a Service (FaaS), 'powered by' {name} en Leys NV. Door onze krachten te bundelen, geniet jij van lagere vaste kosten, snellere time-to-market, hoge flexibiliteit, een verlaagd risicobeheer, hoge kwaliteit en voorspelbaarheid.",
     "image": "/src/assets/faas.png",
     "items": [
       {

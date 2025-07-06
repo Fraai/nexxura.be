@@ -1,10 +1,11 @@
 ---
-import { Image } from 'astro:assets';
-import Logo from '../assets/logo.png';
+import {Image} from 'astro:assets';
+
+import {currentSite} from "../data/sites";
 
 // 1. Import our i18n utilities
-import { useTranslations } from '../i18n/utils';
-import { languages } from '../i18n/config';
+import {useTranslations} from '../i18n/utils';
+import {languages} from '../i18n/config';
 
 // 2. Define the props the component now expects from Layout.astro
 export interface Props {
@@ -18,7 +19,7 @@ export interface Props {
 }
 
 // 3. Get the props passed from the parent component (Layout.astro)
-const { lang, navPaths } = Astro.props;
+const {lang, navPaths} = Astro.props;
 
 // 4. Get the translation function for the current language
 const t = useTranslations(lang);
@@ -26,10 +27,10 @@ const t = useTranslations(lang);
 // 5. Dynamically build the navLinks array using the props and translations
 //    The old, static navLinks array is now gone.
 const navLinks = [
-    { href: navPaths.home, text: t('nav.home') },
-    { href: navPaths.about, text: t('nav.about') },
-    { href: navPaths.services, text: t('nav.services') },
-    { href: navPaths.contact, text: t('nav.contact') },
+    {href: navPaths.home, text: t('nav.home')},
+    {href: navPaths.about, text: t('nav.about')},
+    {href: navPaths.services, text: t('nav.services')},
+    {href: navPaths.contact, text: t('nav.contact')},
 ];
 ---
 
@@ -39,20 +40,30 @@ const navLinks = [
             <div class="flex items-center">
                 {/* 6. Update the logo link to be dynamic */}
                 <a href={navPaths.home} class="text-xl font-bold" aria-label="Homepage">
-                    <Image src={Logo} alt="Logo" height="50" loading="eager" />
+                    <Image
+                            src={currentSite.logo}
+                            alt={`${currentSite.name} Logo`}
+                            width="150"
+                            height="50"
+                            loading="eager"
+                    />
                 </a>
             </div>
             <div class="hidden md:flex md:items-center md:space-x-6">
                 {navLinks.map(link => (
-                        <a href={link.href} class="py-2 px-3 hover:bg-brand-300 rounded-md transition duration-300 ease-in-out">
+                        <a href={link.href}
+                           class="py-2 px-3 hover:bg-brand-300 rounded-md transition duration-300 ease-in-out">
                             {link.text}
                         </a>
                 ))}
             </div>
             <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open main menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                <button id="mobile-menu-button" class="focus:outline-none" aria-controls="mobile-menu"
+                        aria-expanded="false" aria-label="Open main menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16m-4 6h4"></path>
                     </svg>
                 </button>
             </div>

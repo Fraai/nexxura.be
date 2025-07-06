@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -15,3 +15,35 @@
     --color-brand-950: #003028;
     --font-sans: "Nunito Sans", sans-serif;
 }
+
+[data-theme="nexxura"] {
+    --color-brand-50: #eafff7;
+    --color-brand-100: #cdfee9;
+    --color-brand-200: #a0fad8;
+    --color-brand-300: #63f2c5;
+    --color-brand-400: #25e2ac;
+    --color-brand-500: #00cc99;
+    --color-brand-600: #00a47b;
+    --color-brand-700: #008367;
+    --color-brand-800: #006752;
+    --color-brand-900: #005545;
+    --color-brand-950: #003028;
+}
+
+[data-theme="leys"] {
+    --color-brand-50: #f0faff;
+    --color-brand-100: #e0f3fe;
+    --color-brand-200: #bae9fd;
+    --color-brand-300: #7cd9fd;
+    --color-brand-400: #37c6f9;
+    --color-brand-500: #0dafea;
+    --color-brand-600: #0198d7;
+    --color-brand-700: #0270a2;
+    --color-brand-800: #065f86;
+    --color-brand-900: #0b4f6f;
+    --color-brand-950: #083249;
+}
+
+
+
+
