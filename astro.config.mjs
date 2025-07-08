@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import { currentSite } from "./src/data/sites.ts";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
     site: `https://www.${currentSite.id}.be`,
@@ -24,5 +26,5 @@ export default defineConfig({
         }
     },
 
-  integrations: [icon()]
+  integrations: [icon(), sitemap()]
 });
