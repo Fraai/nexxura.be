@@ -19,7 +19,7 @@ import Features from "../../components/Features.astro";
 import Faas from "../../components/Faas.astro";
 import ServicesList from "../../components/ServicesList.astro";
 ---
-<Layout title={t('page.home.title')} lang={lang}>
+<Layout title={t('page.home.title')} description={t(`page.home.description`)} lang={lang}>
     <Features lang={lang as keyof typeof languages} />
     <Faas lang={lang as keyof typeof languages} />
     <ServicesList lang={lang as keyof typeof languages} />
