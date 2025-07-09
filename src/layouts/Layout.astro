@@ -29,17 +29,20 @@ const navPaths = {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{title} - {site.name}</title>
-	<meta name="description" content="">
+	<meta name="description" content={description} />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="canonical" href={canonicalURL}>
 
 	<meta property="og:title" content={`${title} - ${site.name}`} />
+	<meta property="og:description" content={description} />
 	<meta property="og:image" content={socialImageURL} />
 	<meta property="og:url" content={canonicalURL} />
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={`${title} - ${site.name}`} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={socialImageURL} />
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />

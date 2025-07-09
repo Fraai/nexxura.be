@@ -7,19 +7,20 @@
   },
   "page": {
     "home": {
-      "title": "{name}"
+      "title": "Home",
+      "description": "Welcome to {name}, your partner for metalworking and engineering."
     },
     "about": {
-      "title": "About Us"
+      "title": "About Us",
+      "description": "Learn more about the history and expertise of {name}."
     },
     "services": {
-      "title": "Our Services"
+      "title": "Our Services",
+      "description": "Discover our comprehensive range of services, from milling to engineering."
     },
     "contact": {
-      "title": "Contact Us"
-    },
-    "undefined": {
-      "title": "Not Found"
+      "title": "Contact Us",
+      "description": "Contact {name} for all your questions or project ideas."
     }
   },
   "contact": {

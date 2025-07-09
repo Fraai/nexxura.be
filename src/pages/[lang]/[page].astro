@@ -42,7 +42,7 @@ const {lang, page} = Astro.params;
 const {contentKey} = Astro.props;
 const t = useTranslations(lang as keyof typeof languages);
 ---
-<Layout title={t(`page.${contentKey}.title`)} lang={lang}>
+<Layout title={t(`page.${contentKey}.title`)} description={t(`page.${contentKey}.description`)} lang={lang}>
     {contentKey === 'about' && (
             <Features lang={lang as keyof typeof languages} />
             <Timeline lang={lang as keyof typeof languages} />

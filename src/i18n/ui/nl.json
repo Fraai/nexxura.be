@@ -7,19 +7,20 @@
   },
   "page": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "description": "Welkom bij {name}, uw partner voor metaalbewerking en engineering."
     },
     "about": {
-      "title": "Over ons"
+      "title": "Over ons",
+      "description": "Lees meer over de geschiedenis en expertise van {name}."
     },
     "services": {
-      "title": "Onze diensten"
+      "title": "Onze diensten",
+      "description": "Ontdek ons uitgebreide aanbod aan diensten, van frezen tot engineering."
     },
     "contact": {
-      "title": "Contacteer ons"
-    },
-    "undefined": {
-      "title": "Niet gevonden"
+      "title": "Contacteer ons",
+      "description": "Neem contact op met {name} voor al uw vragen of projectideeën."
     }
   },
   "contact": {
